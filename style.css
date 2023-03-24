@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+.container{
+    width: 400px;
+    height: 300px;
+   position: relative;
+    display: flex;
+    font-size:16px ;
+    box-shadow: 5px 5px 5px rgba(0, 0, 255, 0.075);
+    border-radius: 25px;
+}
+/*leftSide*/
+.container .leftSide{
+    width: 50%;
+    background-color: hsl(252, 100%, 67%);
+    border-radius: 25px;
+  
+}
+
+.leftSide> .result-text{
+text-align: center;
+color: white;
+font-weight:bolder;
+padding: 15px;
+font-size: 13px;
+}
+.leftSide> .score{
+    width: 100px;
+    height: 100px;
+    margin: 10px auto;
+    text-align: center;
+    background: linear-gradient(to bottom,hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+    border-radius: 50%;  
+}
+
+.leftSide>.score>p{
+    position: relative;
+    z-index: 1;
+}
+.leftSide> .score> span{
+    font-size: x-small;
+    color: white;
+}
+.leftSide .comment{    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to top,hsl(241, 81%, 54%), transparent);
+    display: flex;
+    flex-flow: column;
+    justify-content: end;
+    align-items: center;
+    color: whitesmoke;
+    border-radius:0 0 25px 25px ;
+}
+.comment>h2{
+    font-size: large;
+    margin-bottom: 10px;
+}
+.comment>p{
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 40px;
+    width: 150px;
+    font-weight: 100;
+    color: rgba(245, 245, 245, 0.721)
+
+}
+/*right Side*/
+.container .rightSide{
+    width: 50%;
+}
+.rightSide h2{
+    font-size: medium;
+     padding: 10px;
+}
+.rightSide>div{
+    margin: 10px;
+    font-size: x-small;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;  
+    border-radius: 10px;
+}
+.rightSide > :nth-child(2){
+    margin-top: 10px;
+    background-color: rgba(255, 0, 81, 0.073);
+    color: red;
+    }
+.rightSide > :nth-child(3){
+    background-color: rgba(255, 166, 0, 0.073);
+    color: orange;
+    }
+.rightSide > :nth-child(4){
+    margin-top: 10px;
+    background-color: rgb(9, 255, 9,0.073);
+    color: rgb(4, 186, 4);
+    }
+.rightSide > :nth-child(5){
+    margin-top: 10px;
+    background-color: rgba(0, 0, 255, 0.073);
+    color: blue;
+    }
+    .rightSide> div>.left{
+        color: rgba(0, 0, 0, 0.393);
+    } 
+    .rightSide> div>.left>span{
+        font-weight: bolder;
+        color: black;
+    }
+    .rightSide>div>.right>img{
+        width: 10px;
+        height: 10px;
+    }
+    .rightSide>button{
+        display: block;
+        margin: 30px auto;
+        padding: 8px 60px;
+        border-radius:25px;
+        background-color: rgb(3, 3, 74);
+        color: aliceblue;
+
+    }
+    .rightSide button:active{
+        background-color: blue;
+        border: 2px outset blue;
+        text-shadow: 1px 1px black;
+    }
+    .attribution{
+        position: absolute;
+        top: 75%;
+        left: 35%;
+        font-size: large;
+        
+    }
+    @media (width<=375px) {
+        .container{
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            height: 600px;
+        }
+        .container .leftSide{
+            width: 100%;
+            height: 300px;
+           
+          
+        }
+        .leftSide .comment{    
+            width: 100%;
+            height: 300px;
+            
+        }
+        .container .rightSide{
+            width: 100%;
+            height: 300px;
+        }
+        .attribution{
+            position: absolute;
+            top: 95%;
+            left: 30%;
+            font-size: small;
+            
+        }
+    }
